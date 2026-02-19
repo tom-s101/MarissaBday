@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy 19th Birthday Marissa! 💜</title>
+
+<!-- ===== SOCIAL PREVIEW / OG BANNER ===== -->
+<meta property="og:title" content="🎂 Happy 19th Birthday Marissa! 💜">
+<meta property="og:description" content="Send Marissa a special birthday video greeting — tap to record your message for her big day! 🥳">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.imgur.com/placeholder.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🎂 Happy 19th Birthday Marissa! 💜">
+<meta name="twitter:description" content="Send Marissa a special birthday video greeting — tap to record your message for her big day! 🥳">
+<meta name="description" content="Send Marissa a special birthday video greeting — tap to record your message for her big day! 🥳">
+<!-- ===================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple-deep: #2D1B4E;
+  --purple-dark: #4A2D7A;
+  --purple-mid: #6B3FA0;
+  --purple-light: #9B6FCC;
+  --purple-soft: #C9A6E8;
+  --purple-pale: #E8D5F5;
+  --gold: #D4A843;
+  --gold-light: #F0D68A;
+  --cream: #FFF8F0;
+  --pink: #E8A0BF;
+  --green-soft: #8BC49E;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--purple-deep);
+  color: var(--cream);
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ======================== */
+/* PARTICLES & STARS        */
+/* ======================== */
+.particles-container {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0; overflow: hidden;
+}
+.particle {
+  position: absolute; border-radius: 50%;
+  animation: floatUp linear infinite; opacity: 0;
+}
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(100vh) scale(0); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-10vh) scale(1); }
+}
+.stars-container {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
+}
+.star {
+  position: absolute; width: 2px; height: 2px;
+  background: var(--gold-light); border-radius: 50%;
+  animation: twinkle ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* ======================== */
+/* PAGE 1 - UPLOAD PAGE     */
+/* ======================== */
+#upload-page {
+  min-height: 100vh;
+  background: linear-gradient(170deg, #1a0e30 0%, var(--purple-deep) 30%, #3a1d6e 70%, #2a1545 100%);
+  position: relative;
+}
+.upload-content {
+  position: relative; z-index: 2;
+  max-width: 560px; margin: 0 auto;
+  padding: 40px 20px 60px;
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center;
+}
+.upload-header {
+  text-align: center; margin-bottom: 32px;
+  animation: fadeInDown 1s ease-out;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.age-badge {
+  display: inline-block;
+  font-family: 'Caveat', cursive; font-size: 1.1rem;
+  color: var(--gold); background: rgba(212, 168, 67, 0.1);
+  border: 1px solid rgba(212, 168, 67, 0.3);
+  padding: 4px 16px; border-radius: 20px;
+  margin-bottom: 16px; letter-spacing: 2px;
+}
+.upload-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem; font-weight: 900; line-height: 1.1; margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--purple-soft), var(--cream), var(--gold-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.upload-header p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; color: var(--purple-soft); font-style: italic; line-height: 1.5;
+}
+.upload-card {
+  background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(20px);
+  border: 1px solid rgba(155, 111, 204, 0.15); border-radius: 24px;
+  padding: 32px 24px; width: 100%;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem; color: var(--purple-soft); margin-bottom: 8px; font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%; padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(155, 111, 204, 0.2);
+  border-radius: 14px; color: var(--cream);
+  font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+  transition: all 0.3s; outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--purple-light);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(107, 63, 160, 0.15);
+}
+.form-group input.error-field { border-color: #e88; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(201, 166, 232, 0.4); }
+
+/* Drop zone */
+.drop-zone {
+  border: 2px dashed rgba(155, 111, 204, 0.3); border-radius: 18px;
+  padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.3s;
+  background: rgba(107, 63, 160, 0.05); position: relative; overflow: hidden;
+}
+.drop-zone:hover, .drop-zone.dragover {
+  border-color: var(--purple-light);
+  background: rgba(107, 63, 160, 0.12);
+  transform: scale(1.01);
+}
+.drop-zone.error-field { border-color: #e88; }
+.drop-zone-icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+.drop-zone-text { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--purple-soft); margin-bottom: 8px; }
+.drop-zone-hint { font-size: 0.8rem; color: rgba(201, 166, 232, 0.5); }
+
+.file-selected { display: none; align-items: center; gap: 12px; padding: 14px; background: rgba(107, 63, 160, 0.1); border-radius: 12px; margin-top: 12px; }
+.file-selected.show { display: flex; }
+.file-selected .file-icon { font-size: 1.5rem; }
+.file-selected .file-info { flex: 1; min-width: 0; }
+.file-selected .file-name { font-size: 0.85rem; color: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-selected .file-size { font-size: 0.75rem; color: var(--purple-soft); }
+.file-selected .file-remove { background: none; border: none; color: var(--pink); font-size: 1.2rem; cursor: pointer; padding: 4px; }
+
+.error-msg { font-size: 0.8rem; color: #f09090; margin-top: 6px; display: none; }
+.error-msg.show { display: block; }
+
+/* Submit button */
+.submit-btn {
+  width: 100%; padding: 16px;
+  background: linear-gradient(135deg, var(--purple-mid), var(--purple-dark));
+  border: 1px solid rgba(155, 111, 204, 0.3); border-radius: 16px;
+  color: var(--cream); font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 700; cursor: pointer; transition: all 0.3s;
+  margin-top: 8px; position: relative; overflow: hidden;
+}
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(107, 63, 160, 0.4);
+  background: linear-gradient(135deg, var(--purple-light), var(--purple-mid));
+}
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* Progress bar */
+.progress-container { display: none; margin-top: 16px; }
+.progress-container.show { display: block; }
+.progress-bar-bg { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+.progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--purple-light), var(--gold)); border-radius: 3px; width: 0%; transition: width 0.3s; }
+.progress-text { font-size: 0.8rem; color: var(--purple-soft); text-align: center; margin-top: 8px; }
+
+/* Success overlay */
+.success-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26, 14, 48, 0.95); z-index: 100; justify-content: center; align-items: center; flex-direction: column; text-align: center; padding: 40px; }
+.success-overlay.show { display: flex; }
+.success-overlay .checkmark { font-size: 4rem; margin-bottom: 24px; animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+@keyframes popIn { from { transform: scale(0); } to { transform: scale(1); } }
+.success-overlay h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 12px; color: var(--cream); }
+.success-overlay p { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--purple-soft); }
+
+.secret-nav { position: fixed; bottom: 20px; right: 20px; z-index: 50; opacity: 0.15; transition: opacity 0.3s; }
+.secret-nav:hover { opacity: 0.6; }
+.secret-nav a { color: var(--purple-soft); text-decoration: none; font-size: 0.7rem; font-family: 'Caveat', cursive; }
+
+/* ======================== */
+/* PAGE 2 - MARISSA'S PAGE  */
+/* ======================== */
+#marissa-page { display: none; min-height: 100vh; background: linear-gradient(170deg, #1a0e30 0%, #2a1248 40%, #3a1d6e 70%, #1a0e30 100%); position: relative; overflow-x: hidden; }
+#marissa-page.active { display: block; }
+#upload-page.hidden { display: none; }
+
+.marissa-hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px; position: relative; }
+.marissa-hero-age { font-family: 'Caveat', cursive; font-size: 6rem; font-weight: 700; background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; opacity: 0; animation: fadeInScale 1.2s ease-out 0.5s forwards; line-height: 1; cursor: pointer; }
+@keyframes fadeInScale { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+.marissa-hero h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; font-weight: 900; line-height: 1.1; margin: 16px 0; opacity: 0; animation: fadeInUp 1s ease-out 1s forwards; }
+.marissa-hero h1 span { display: block; background: linear-gradient(135deg, var(--purple-soft), var(--cream), var(--pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.marissa-hero-sub { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--purple-soft); font-style: italic; opacity: 0; animation: fadeInUp 1s ease-out 1.5s forwards; }
+.scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); opacity: 0; animation: fadeInUp 1s ease-out 2.5s forwards; }
+.scroll-arrow { width: 24px; height: 24px; border-right: 2px solid var(--purple-soft); border-bottom: 2px solid var(--purple-soft); transform: rotate(45deg); animation: bounceDown 2s ease-in-out infinite; opacity: 0.5; }
+@keyframes bounceDown { 0%, 100% { transform: rotate(45deg) translateY(0); } 50% { transform: rotate(45deg) translateY(8px); } }
+
+/* Name section */
+.name-section { padding: 60px 20px 80px; max-width: 600px; margin: 0 auto; }
+.name-section-title { font-family: 'Caveat', cursive; font-size: 1.4rem; color: var(--gold); text-align: center; margin-bottom: 40px; opacity: 0; }
+.name-section-title.visible { animation: fadeInUp 0.8s ease-out forwards; }
+.name-letter-row { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; opacity: 0; transform: translateX(-30px); transition: all 0.6s ease-out; }
+.name-letter-row.visible { opacity: 1; transform: translateX(0); }
+.name-letter-row:nth-child(even) { transform: translateX(30px); }
+.name-letter-row:nth-child(even).visible { transform: translateX(0); }
+.name-letter-char { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; min-width: 60px; text-align: center; background: linear-gradient(135deg, var(--purple-light), var(--pink)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0; }
+.name-letter-word { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--cream); font-style: italic; line-height: 1.4; }
+.name-letter-word strong { color: var(--purple-soft); font-weight: 600; }
+
+/* Video section */
+.video-section { padding: 60px 20px; text-align: center; max-width: 600px; margin: 0 auto; }
+.video-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 8px; color: var(--cream); }
+.video-section .subtitle { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--purple-soft); font-style: italic; margin-bottom: 24px; }
+.video-wrapper { position: relative; padding-bottom: 56.25%; border-radius: 20px; overflow: hidden; background: rgba(0,0,0,0.3); border: 1px solid rgba(155, 111, 204, 0.2); }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.video-placeholder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: var(--purple-soft); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; }
+.video-placeholder .play-icon { font-size: 3rem; margin-bottom: 12px; opacity: 0.5; }
+
+/* Messages */
+.messages-section { padding: 60px 20px; max-width: 600px; margin: 0 auto; }
+.messages-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; text-align: center; margin-bottom: 32px; color: var(--cream); }
+.message-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(155, 111, 204, 0.12); border-radius: 18px; padding: 24px; margin-bottom: 16px; opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+.message-card.visible { opacity: 1; transform: translateY(0); }
+.message-card .sender { font-family: 'Caveat', cursive; font-size: 1.2rem; color: var(--gold); margin-bottom: 8px; }
+.message-card .msg-text { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--purple-pale); line-height: 1.6; font-style: italic; }
+
+/* Envelopes */
+.envelopes-section { padding: 60px 20px 40px; max-width: 600px; margin: 0 auto; }
+.envelopes-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; text-align: center; margin-bottom: 8px; color: var(--cream); }
+.envelopes-section .sub { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--purple-soft); text-align: center; font-style: italic; margin-bottom: 32px; }
+.envelopes-counter { text-align: center; font-family: 'Caveat', cursive; font-size: 1.1rem; color: var(--gold); margin-bottom: 24px; }
+.envelopes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 14px; justify-items: center; }
+.envelope { width: 88px; height: 70px; background: linear-gradient(145deg, rgba(107, 63, 160, 0.2), rgba(74, 45, 122, 0.3)); border: 1px solid rgba(155, 111, 204, 0.25); border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s; position: relative; overflow: hidden; }
+.envelope::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 50%; background: linear-gradient(145deg, rgba(155, 111, 204, 0.1), transparent); clip-path: polygon(0 0, 50% 70%, 100% 0); }
+.envelope:hover { transform: translateY(-4px) scale(1.05); border-color: var(--purple-light); box-shadow: 0 8px 25px rgba(107, 63, 160, 0.3); }
+.envelope.opened { background: linear-gradient(145deg, rgba(212, 168, 67, 0.1), rgba(107, 63, 160, 0.15)); border-color: rgba(212, 168, 67, 0.3); }
+.envelope .env-num { font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--purple-soft); z-index: 1; pointer-events: none; }
+.envelope .env-icon { font-size: 0.8rem; z-index: 1; margin-top: 2px; pointer-events: none; }
+
+/* Envelope modal */
+.envelope-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26, 14, 48, 0.92); backdrop-filter: blur(10px); z-index: 200; justify-content: center; align-items: center; padding: 24px; }
+.envelope-modal.show { display: flex; }
+.envelope-modal-content { background: linear-gradient(160deg, #2a1545, #3a1d6e); border: 1px solid rgba(155, 111, 204, 0.25); border-radius: 24px; padding: 36px 28px; max-width: 420px; width: 100%; text-align: center; animation: modalPop 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); position: relative; max-height: 80vh; overflow-y: auto; }
+@keyframes modalPop { from { transform: scale(0.7) translateY(30px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
+.modal-close { position: absolute; top: 14px; right: 18px; background: none; border: none; color: var(--purple-soft); font-size: 1.4rem; cursor: pointer; padding: 4px; }
+.modal-num { font-family: 'Caveat', cursive; font-size: 1.8rem; color: var(--gold); margin-bottom: 8px; }
+.modal-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--cream); margin-bottom: 16px; }
+.modal-body { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--purple-pale); line-height: 1.7; font-style: italic; }
+
+/* ======================== */
+/* SMISKI IMAGES            */
+/* ======================== */
+.smiski-img {
+  position: fixed;
+  width: 90px;
+  height: auto;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  filter: drop-shadow(0 4px 12px rgba(139, 196, 158, 0.25));
+  transition: opacity 1s ease;
+  border-radius: 12px;
+}
+.smiski-img.visible { opacity: 0.88; }
+
+/* Each smiski gets a unique float animation */
+.smiski-img:nth-child(1) { animation: smiskiFloat1 7s ease-in-out infinite; }
+.smiski-img:nth-child(2) { animation: smiskiFloat2 8s ease-in-out infinite; }
+.smiski-img:nth-child(3) { animation: smiskiFloat3 6.5s ease-in-out infinite; }
+.smiski-img:nth-child(4) { animation: smiskiFloat4 9s ease-in-out infinite; }
+.smiski-img:nth-child(5) { animation: smiskiFloat5 7.5s ease-in-out infinite; }
+.smiski-img:nth-child(6) { animation: smiskiFloat6 8.5s ease-in-out infinite; }
+.smiski-img:nth-child(7) { animation: smiskiFloat7 6s ease-in-out infinite; }
+.smiski-img:nth-child(8) { animation: smiskiFloat8 10s ease-in-out infinite; }
+.smiski-img:nth-child(9) { animation: smiskiFloat1 7.2s ease-in-out infinite 1s; }
+
+@keyframes smiskiFloat1 { 0%,100%{transform:translateY(0) rotate(-3deg);} 50%{transform:translateY(-18px) rotate(3deg);} }
+@keyframes smiskiFloat2 { 0%,100%{transform:translateY(0) rotate(4deg);} 33%{transform:translateY(-12px) rotate(-2deg);} 66%{transform:translateY(-20px) rotate(5deg);} }
+@keyframes smiskiFloat3 { 0%,100%{transform:translateY(0) scale(1);} 50%{transform:translateY(-15px) scale(1.04);} }
+@keyframes smiskiFloat4 { 0%,100%{transform:translateY(0) rotate(0deg);} 25%{transform:translateY(-10px) rotate(-4deg);} 75%{transform:translateY(-22px) rotate(4deg);} }
+@keyframes smiskiFloat5 { 0%,100%{transform:translateY(0) rotate(-2deg) scale(1);} 50%{transform:translateY(-16px) rotate(2deg) scale(1.05);} }
+@keyframes smiskiFloat6 { 0%,100%{transform:translateY(0);} 40%{transform:translateY(-14px) rotate(3deg);} 80%{transform:translateY(-8px) rotate(-3deg);} }
+@keyframes smiskiFloat7 { 0%,100%{transform:translateY(0) rotate(5deg);} 50%{transform:translateY(-20px) rotate(-5deg);} }
+@keyframes smiskiFloat8 { 0%,100%{transform:translateY(0);} 30%{transform:translateY(-8px);} 60%{transform:translateY(-18px);} }
+
+/* Clickable smiskis show cursor */
+.smiski-img.clickable { pointer-events: auto; cursor: pointer; }
+.smiski-img.clickable:hover { filter: drop-shadow(0 4px 20px rgba(212, 168, 67, 0.5)) brightness(1.08); }
+
+/* ======================== */
+/* FLOATING FLOWERS         */
+/* ======================== */
+.floating-flower { position: fixed; font-size: 1.5rem; opacity: 0; pointer-events: none; z-index: 4; }
+.floating-flower.visible { opacity: 0.5; animation: flowerDrift linear infinite; }
+@keyframes flowerDrift { 0% { transform: translateY(100vh) rotate(0deg); } 100% { transform: translateY(-10vh) rotate(360deg); } }
+
+/* Easter egg hints */
+.easter-egg-hint { position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); font-family: 'Caveat', cursive; font-size: 0.9rem; color: rgba(201, 166, 232, 0.25); z-index: 10; pointer-events: none; transition: opacity 0.5s; white-space: nowrap; }
+
+/* Sparkles */
+.sparkle-explosion { position: fixed; pointer-events: none; z-index: 300; }
+.sparkle { position: absolute; font-size: 1.5rem; animation: sparkleOut 1s ease-out forwards; }
+@keyframes sparkleOut { 0% { transform: translate(0, 0) scale(1); opacity: 1; } 100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; } }
+
+/* Confetti */
+.confetti-piece { position: fixed; width: 10px; height: 10px; z-index: 300; pointer-events: none; animation: confettiFall linear forwards; }
+@keyframes confettiFall { 0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+
+/* Tap counter */
+.tap-counter-display { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 900; pointer-events: none; z-index: 250; opacity: 0; color: var(--gold); text-shadow: 0 0 30px rgba(212, 168, 67, 0.5); }
+
+/* Secret message popup */
+.secret-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.7); background: linear-gradient(160deg, #2a1545, #3a1d6e); border: 1px solid rgba(212, 168, 67, 0.4); border-radius: 24px; padding: 32px 28px; max-width: 360px; width: 90%; text-align: center; z-index: 400; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+.secret-popup.show { display: block; transform: translate(-50%, -50%) scale(1); }
+.secret-popup h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold); margin-bottom: 12px; }
+.secret-popup p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--purple-pale); font-style: italic; line-height: 1.6; margin-bottom: 16px; }
+.secret-popup button { background: linear-gradient(135deg, var(--purple-mid), var(--purple-dark)); border: none; color: var(--cream); font-family: 'Caveat', cursive; font-size: 1.1rem; padding: 10px 24px; border-radius: 12px; cursor: pointer; }
+.secret-popup-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 399; }
+.secret-popup-overlay.show { display: block; }
+
+/* Footer */
+.marissa-footer { text-align: center; padding: 60px 20px 40px; position: relative; }
+.marissa-footer p { font-family: 'Caveat', cursive; font-size: 1.2rem; color: var(--purple-soft); }
+.marissa-footer .heart { color: var(--pink); display: inline-block; animation: heartbeat 1.5s ease-in-out infinite; }
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.15); } 30% { transform: scale(1); } 45% { transform: scale(1.1); } }
+
+.back-nav { position: fixed; top: 16px; left: 16px; z-index: 50; }
+.back-nav a { color: var(--purple-soft); text-decoration: none; font-family: 'Caveat', cursive; font-size: 1rem; opacity: 0.4; transition: opacity 0.3s; }
+.back-nav a:hover { opacity: 0.8; }
+
+/* Responsive */
+@media (max-width: 400px) {
+  .upload-header h1 { font-size: 2rem; }
+  .marissa-hero-age { font-size: 4.5rem; }
+  .marissa-hero h1 { font-size: 2.4rem; }
+  .name-letter-char { font-size: 2.8rem; min-width: 48px; }
+  .envelopes-grid { grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); gap: 10px; }
+  .envelope { width: 75px; height: 60px; }
+  .smiski-img { width: 65px; }
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(155, 111, 204, 0.3); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ====== UPLOAD PAGE ====== -->
+<div id="upload-page">
+  <div class="particles-container" id="particles"></div>
+  <div class="stars-container" id="stars"></div>
+
+  <div class="upload-content">
+    <div class="upload-header">
+      <div class="age-badge">✦ SHE'S TURNING 19 ✦</div>
+      <h1>Send Marissa a Birthday Greeting</h1>
+      <p>Record a special video message for her birthday — she's going to love it!</p>
+    </div>
+
+    <div class="upload-card">
+      <div class="form-group">
+        <label>Your Name <span style="color:#f09090;font-size:0.85rem;">*</span></label>
+        <input type="text" id="sender-name" placeholder="First and last name" autocomplete="name">
+        <div class="error-msg" id="name-error">Please enter your full name to continue.</div>
+      </div>
+
+      <div class="form-group">
+        <label>Your Message <span style="color: rgba(201,166,232,0.4); font-size:0.85rem;">(optional)</span></label>
+        <textarea id="sender-message" placeholder="Write a sweet message for Marissa..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Your Video Greeting <span style="color:#f09090;font-size:0.85rem;">*</span></label>
+        <div class="drop-zone" id="drop-zone">
+          <span class="drop-zone-icon">🎥</span>
+          <div class="drop-zone-text">Tap to select or drag your video here</div>
+          <div class="drop-zone-hint">MP4, MOV, AVI • Max 500 MB</div>
+          <input type="file" id="video-input" accept="video/*" style="display:none;">
+        </div>
+        <div class="file-selected" id="file-selected">
+          <span class="file-icon">🎬</span>
+          <div class="file-info">
+            <div class="file-name" id="file-name"></div>
+            <div class="file-size" id="file-size"></div>
+          </div>
+          <button class="file-remove" id="file-remove">✕</button>
+        </div>
+        <div class="error-msg" id="video-error">Please add a video greeting before sending.</div>
+      </div>
+
+      <button class="submit-btn" id="submit-btn">Send Your Birthday Greetings 💜</button>
+
+      <div class="progress-container" id="progress-container">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text" id="progress-text">Uploading... 0%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="secret-nav">
+    <a href="#marissa">💜</a>
+  </div>
+</div>
+
+<!-- ====== SUCCESS OVERLAY ====== -->
+<div class="success-overlay" id="success-overlay">
+  <div class="checkmark">💜</div>
+  <h2>Thank you!</h2>
+  <p>Your birthday greeting has been sent. Marissa is going to love it!</p>
+</div>
+
+<!-- ====== MARISSA'S PAGE ====== -->
+<div id="marissa-page">
+  <div class="back-nav"><a href="#upload">← back</a></div>
+  <div class="particles-container" id="particles2"></div>
+  <div class="stars-container" id="stars2"></div>
+
+  <!-- Hero -->
+  <div class="marissa-hero" id="marissa-hero">
+    <div class="marissa-hero-age" id="age-tap">19</div>
+    <h1><span>Happy Birthday,</span><span>Marissa</span></h1>
+    <p class="marissa-hero-sub">This one's just for you ✦</p>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </div>
+
+  <!-- Name acrostic -->
+  <div class="name-section" id="name-section">
+    <div class="name-section-title">Each letter tells a story about you...</div>
+    <div class="name-letter-row" data-delay="0">
+      <div class="name-letter-char">M</div>
+      <div class="name-letter-word"><strong>Magnetic</strong> — You light up every room you walk into, and people can't help but gravitate toward your energy.</div>
+    </div>
+    <div class="name-letter-row" data-delay="100">
+      <div class="name-letter-char">A</div>
+      <div class="name-letter-word"><strong>Authentic</strong> — You never pretend to be anyone other than exactly who you are, and that's beautiful.</div>
+    </div>
+    <div class="name-letter-row" data-delay="200">
+      <div class="name-letter-char">R</div>
+      <div class="name-letter-word"><strong>Radiant</strong> — Your smile alone could make someone's entire day better.</div>
+    </div>
+    <div class="name-letter-row" data-delay="300">
+      <div class="name-letter-char">I</div>
+      <div class="name-letter-word"><strong>Irreplaceable</strong> — There's only one you, and the world is so much better because of it.</div>
+    </div>
+    <div class="name-letter-row" data-delay="400">
+      <div class="name-letter-char">S</div>
+      <div class="name-letter-word"><strong>Soulful</strong> — You feel things deeply and love with your whole heart.</div>
+    </div>
+    <div class="name-letter-row" data-delay="500">
+      <div class="name-letter-char">S</div>
+      <div class="name-letter-word"><strong>Stunning</strong> — Inside and out, you're absolutely breathtaking.</div>
+    </div>
+    <div class="name-letter-row" data-delay="600">
+      <div class="name-letter-char">A</div>
+      <div class="name-letter-word"><strong>Amazing</strong> — At 19, you've already become someone people look up to. That's incredible.</div>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="video-section" id="video-section">
+    <h2>A Video From Everyone</h2>
+    <p class="subtitle">All your birthday greetings, in one place</p>
+    <div class="video-wrapper">
+      <div class="video-placeholder">
+        <div class="play-icon">▶</div>
+        <div>Video coming soon...</div>
+        <div style="font-size:0.85rem; margin-top:8px; opacity:0.5;">Replace the placeholder in the code with your YouTube embed URL</div>
+      </div>
+      <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+    </div>
+  </div>
+
+  <!-- Messages Section -->
+  <div class="messages-section" id="messages-section">
+    <h2>Messages For You 💌</h2>
+    <div class="message-card">
+      <div class="sender">— From Someone Special</div>
+      <div class="msg-text">Happy birthday Marissa! You deserve all the love in the world. Here's to an amazing year of being 19! 💜</div>
+    </div>
+    <div class="message-card">
+      <div class="sender">— A Friend</div>
+      <div class="msg-text">Wishing you the happiest birthday! You're such a wonderful person and I'm so lucky to know you.</div>
+    </div>
+  </div>
+
+  <!-- 19 Envelopes -->
+  <div class="envelopes-section" id="envelopes-section">
+    <h2>19 Little Surprises</h2>
+    <p class="sub">One for each year of your beautiful life — tap to open</p>
+    <div class="envelopes-counter"><span id="opened-count">0</span> / 19 opened</div>
+    <div class="envelopes-grid" id="envelopes-grid"></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="marissa-footer">
+    <p>Made with <span class="heart">♥</span> just for you, Marissa</p>
+    <p style="margin-top:8px; font-size:0.9rem; opacity:0.5;">Happy 19th 💜</p>
+  </div>
+
+  <!-- Easter egg hints (changes over time) -->
+  <div class="easter-egg-hint" id="egg-hint"></div>
+</div>
+
+<!-- Envelope Modal -->
+<div class="envelope-modal" id="envelope-modal">
+  <div class="envelope-modal-content">
+    <button class="modal-close" id="modal-close">✕</button>
+    <div class="modal-num" id="modal-num"></div>
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Secret popup for easter eggs -->
+<div class="secret-popup-overlay" id="secret-overlay"></div>
+<div class="secret-popup" id="secret-popup">
+  <h3 id="secret-title">🎉 Easter Egg Found!</h3>
+  <p id="secret-text"></p>
+  <button onclick="closeSecret()">Keep exploring ✨</button>
+</div>
+
+<script>
+// ==========================================
+// CONFIGURATION
+// ==========================================
+const TELEGRAM_BOT_TOKEN = '8259005435:AAHD_sefg7cyAYxeKy81Fx0SaHbLzQVb29c';
+const TELEGRAM_CHAT_ID = '6583171453';
+const MAX_FILE_SIZE = 500 * 1024 * 1024; // 500 MB
+
+// Smiski image filenames (place these in the same folder as index.html)
+// Images from the uploaded photos:
+const smiskiImages = [
+  { src: 'IMG_2923.jpeg', alt: 'Smiski Happy Birthday Banner', clickable: true, secret: '🎉 You found the party smiski! They\'ve been celebrating you all day, Marissa!' },
+  { src: 'IMG_2922.jpeg', alt: 'Smiski with Birthday Cake', clickable: true, secret: '🎂 The cake smiski has been saving this slice just for you! Make a wish!' },
+  { src: 'IMG_2920.jpeg', alt: 'Smiski Party Horn', clickable: false, secret: null },
+  { src: 'IMG_2919.jpeg', alt: 'Smiski with Gift', clickable: true, secret: '🎁 A gift just for you from the gift smiski: You are endlessly loved.' },
+  { src: 'IMG_2918.jpeg', alt: 'Confused Smiski', clickable: true, secret: '🤔 Even confused smiski knows one thing for sure: Happy Birthday Marissa!' },
+  { src: 'IMG_2917.jpeg', alt: 'Happy Jumping Smiski', clickable: false, secret: null },
+  { src: 'IMG_2916.jpeg', alt: 'Sleeping Smiski', clickable: true, secret: '😴 Sleeping smiski dreamed about your birthday! It was the best dream ever.' },
+  { src: 'IMG_2915.jpeg', alt: 'Peeking Smiski', clickable: true, secret: '👀 Peeking smiski has been watching over you all year. You\'re doing amazing!' },
+  { src: 'F5A25E04955D4D9CB3D6321234B37B22.png', alt: 'Happy Birthday Marissa Smiski', clickable: true, secret: '💜 This is the most important smiski of all — they came just to wish YOU a Happy 19th Birthday!' },
+];
+
+// Smiski positions on screen (top/bottom, left/right)
+const smiskiPositions = [
+  { top: '8%',  left:  '2%' },
+  { top: '22%', right: '2%' },
+  { top: '38%', left:  '1%' },
+  { top: '54%', right: '1%' },
+  { top: '68%', left:  '3%' },
+  { top: '80%', right: '2%' },
+  { bottom: '18%', left: '2%' },
+  { bottom: '8%',  right: '3%' },
+  { top: '45%', left:  '50%', transform: 'translateX(-50%)' }, // center secret one hidden
+];
+
+// ==========================================
+// PARTICLES & STARS
+// ==========================================
+function createParticles(containerId, count = 30) {
+  const c = document.getElementById(containerId);
+  if (!c) return;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('div');
+    p.classList.add('particle');
+    const size = Math.random() * 4 + 2;
+    const colors = ['#9B6FCC', '#C9A6E8', '#D4A843', '#E8A0BF', '#8BC49E'];
+    p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;background:${colors[Math.floor(Math.random()*colors.length)]};animation-duration:${Math.random()*10+8}s;animation-delay:${Math.random()*10}s;`;
+    c.appendChild(p);
+  }
+}
+
+function createStars(containerId, count = 50) {
+  const c = document.getElementById(containerId);
+  if (!c) return;
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('div');
+    s.classList.add('star');
+    s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${Math.random()*3+2}s;animation-delay:${Math.random()*3}s;`;
+    c.appendChild(s);
+  }
+}
+
+createParticles('particles');
+createStars('stars');
+
+// ==========================================
+// ROUTING
+// ==========================================
+function showPage(page) {
+  if (page === 'marissa') {
+    document.getElementById('upload-page').classList.add('hidden');
+    document.getElementById('marissa-page').classList.add('active');
+    initMarissaPage();
+  } else {
+    document.getElementById('upload-page').classList.remove('hidden');
+    document.getElementById('marissa-page').classList.remove('active');
+  }
+}
+
+window.addEventListener('hashchange', () => {
+  const hash = location.hash.replace('#', '');
+  showPage(hash === 'marissa' ? 'marissa' : 'upload');
+});
+
+if (location.hash === '#marissa') showPage('marissa');
+
+// ==========================================
+// FILE UPLOAD LOGIC
+// ==========================================
+const dropZone = document.getElementById('drop-zone');
+const videoInput = document.getElementById('video-input');
+const fileSelected = document.getElementById('file-selected');
+const fileNameEl = document.getElementById('file-name');
+const fileSizeEl = document.getElementById('file-size');
+const fileRemove = document.getElementById('file-remove');
+const submitBtn = document.getElementById('submit-btn');
+const progressContainer = document.getElementById('progress-container');
+const progressFill = document.getElementById('progress-fill');
+const progressText = document.getElementById('progress-text');
+const successOverlay = document.getElementById('success-overlay');
+
+let selectedFile = null;
+
+dropZone.addEventListener('click', () => videoInput.click());
+dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault(); dropZone.classList.remove('dragover');
+  if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+});
+videoInput.addEventListener('change', () => { if (videoInput.files.length) handleFile(videoInput.files[0]); });
+
+function handleFile(file) {
+  if (!file.type.startsWith('video/')) {
+    alert('Please select a video file.'); return;
+  }
+  // 500 MB limit
+  if (file.size > MAX_FILE_SIZE) {
+    alert(`Your video is ${formatSize(file.size)}, which exceeds the 500 MB limit. Please trim or compress it and try again.`);
+    return;
+  }
+  selectedFile = file;
+  fileNameEl.textContent = file.name;
+  fileSizeEl.textContent = formatSize(file.size);
+  fileSelected.classList.add('show');
+  dropZone.style.display = 'none';
+  // Clear video error
+  document.getElementById('video-error').classList.remove('show');
+  dropZone.classList.remove('error-field');
+}
+
+fileRemove.addEventListener('click', () => {
+  selectedFile = null; videoInput.value = '';
+  fileSelected.classList.remove('show');
+  dropZone.style.display = '';
+});
+
+function formatSize(bytes) {
+  if (bytes < 1024*1024) return (bytes/1024).toFixed(1) + ' KB';
+  if (bytes < 1024*1024*1024) return (bytes/(1024*1024)).toFixed(1) + ' MB';
+  return (bytes/(1024*1024*1024)).toFixed(2) + ' GB';
+}
+
+// ==========================================
+// VALIDATION & SUBMIT
+// ==========================================
+submitBtn.addEventListener('click', handleSubmit);
+
+function validateForm() {
+  let valid = true;
+  const name = document.getElementById('sender-name').value.trim();
+  const nameInput = document.getElementById('sender-name');
+  const nameError = document.getElementById('name-error');
+  const videoError = document.getElementById('video-error');
+
+  if (!name) {
+    nameInput.classList.add('error-field');
+    nameError.classList.add('show');
+    valid = false;
+  } else {
+    nameInput.classList.remove('error-field');
+    nameError.classList.remove('show');
+  }
+
+  if (!selectedFile) {
+    dropZone.classList.add('error-field');
+    videoError.classList.add('show');
+    valid = false;
+  } else {
+    dropZone.classList.remove('error-field');
+    videoError.classList.remove('show');
+  }
+
+  return valid;
+}
+
+document.getElementById('sender-name').addEventListener('input', function() {
+  if (this.value.trim()) {
+    this.classList.remove('error-field');
+    document.getElementById('name-error').classList.remove('show');
+  }
+});
+
+async function handleSubmit() {
+  if (!validateForm()) return;
+
+  const name = document.getElementById('sender-name').value.trim();
+  const message = document.getElementById('sender-message').value.trim();
+
+  submitBtn.disabled = true;
+  progressContainer.classList.add('show');
+
+  const caption = `🎂 Birthday Greeting for Marissa!\n\n👤 From: ${name}${message ? '\n💬 Message: ' + message : ''}`;
+
+  try {
+    // First send a notification message so you know who submitted immediately
+    await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CHAT_ID,
+        text: `🔔 NEW BIRTHDAY SUBMISSION!\n\n👤 Name: ${name}${message ? '\n💬 Message: ' + message : ''}\n📹 File: ${selectedFile.name} (${formatSize(selectedFile.size)})\n⏳ Upload starting now...`
+      })
+    });
+
+    if (selectedFile.size <= 49 * 1024 * 1024) {
+      await sendVideoDirect(selectedFile, caption);
+    } else {
+      await sendLargeFile(selectedFile, caption, name);
+    }
+
+    progressFill.style.width = '100%';
+    progressText.textContent = 'Sent! 💜';
+    setTimeout(() => { successOverlay.classList.add('show'); }, 800);
+    setTimeout(() => { successOverlay.classList.remove('show'); resetForm(); }, 4500);
+
+  } catch (err) {
+    console.error(err);
+    alert('Something went wrong sending your video. Please try again!');
+    submitBtn.disabled = false;
+    progressContainer.classList.remove('show');
+  }
+}
+
+async function sendVideoDirect(file, caption) {
+  const formData = new FormData();
+  formData.append('chat_id', TELEGRAM_CHAT_ID);
+  formData.append('video', file);
+  formData.append('caption', caption);
+  formData.append('supports_streaming', 'true');
+  const xhr = new XMLHttpRequest();
+  return new Promise((resolve, reject) => {
+    xhr.upload.addEventListener('progress', (e) => {
+      if (e.lengthComputable) {
+        const pct = Math.round((e.loaded / e.total) * 100);
+        progressFill.style.width = pct + '%';
+        progressText.textContent = `Uploading... ${pct}%`;
+      }
+    });
+    xhr.addEventListener('load', () => { xhr.status === 200 ? resolve(JSON.parse(xhr.responseText)) : reject(new Error(xhr.responseText)); });
+    xhr.addEventListener('error', reject);
+    xhr.open('POST', `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendVideo`);
+    xhr.send(formData);
+  });
+}
+
+async function sendLargeFile(file, caption, senderName) {
+  const CHUNK_SIZE = 49 * 1024 * 1024;
+  const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
+  await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: caption + `\n\n📁 Video: ${file.name} (${formatSize(file.size)})\n📦 Split into ${totalChunks} part(s).` })
+  });
+  for (let i = 0; i < totalChunks; i++) {
+    const start = i * CHUNK_SIZE;
+    const end = Math.min(start + CHUNK_SIZE, file.size);
+    const chunk = file.slice(start, end);
+    const ext = file.name.split('.').pop();
+    const chunkName = totalChunks === 1 ? file.name : `${senderName.replace(/\s+/g, '_')}_part${i+1}of${totalChunks}.${ext}`;
+    const chunkBlob = new File([chunk], chunkName, { type: file.type });
+    const formData = new FormData();
+    formData.append('chat_id', TELEGRAM_CHAT_ID);
+    formData.append('document', chunkBlob);
+    formData.append('caption', `Part ${i+1}/${totalChunks} from ${senderName}`);
+    await new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.upload.addEventListener('progress', (e) => {
+        if (e.lengthComputable) {
+          const pct = Math.round(((i * CHUNK_SIZE + e.loaded) / file.size) * 100);
+          progressFill.style.width = pct + '%';
+          progressText.textContent = `Uploading part ${i+1}/${totalChunks}... ${pct}%`;
+        }
+      });
+      xhr.addEventListener('load', () => { xhr.status === 200 ? resolve() : reject(new Error(xhr.responseText)); });
+      xhr.addEventListener('error', reject);
+      xhr.open('POST', `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument`);
+      xhr.send(formData);
+    });
+  }
+}
+
+function resetForm() {
+  document.getElementById('sender-name').value = '';
+  document.getElementById('sender-message').value = '';
+  selectedFile = null; videoInput.value = '';
+  fileSelected.classList.remove('show');
+  dropZone.style.display = '';
+  submitBtn.disabled = false;
+  progressContainer.classList.remove('show');
+  progressFill.style.width = '0%';
+}
+
+// ==========================================
+// MARISSA PAGE INIT
+// ==========================================
+let marissaInitialized = false;
+
+function initMarissaPage() {
+  if (marissaInitialized) return;
+  marissaInitialized = true;
+  createParticles('particles2', 25);
+  createStars('stars2', 60);
+  createSmiskiImages();
+  createFloatingFlowers();
+  initEnvelopes();
+  initEasterEggs();
+  initScrollAnimations();
+  rotateEggHints();
+}
+
+// ==========================================
+// SMISKI IMAGES (real photos)
+// ==========================================
+function createSmiskiImages() {
+  const page = document.getElementById('marissa-page');
+
+  smiskiImages.forEach((smiski, i) => {
+    // Skip the center one (index 8) — it's a hidden easter egg triggered separately
+    if (i === 8) return;
+
+    const img = document.createElement('img');
+    img.classList.add('smiski-img');
+    if (smiski.clickable) img.classList.add('clickable');
+    img.src = smiski.src;
+    img.alt = smiski.alt;
+
+    const pos = smiskiPositions[i];
+    Object.keys(pos).forEach(k => img.style[k] = pos[k]);
+    img.style.animationDelay = `${i * 0.6}s`;
+
+    if (smiski.clickable && smiski.secret) {
+      img.addEventListener('click', () => {
+        showSecret('🌟 Easter Egg!', smiski.secret);
+        createSparkle(parseInt(img.style.left || '50'), parseInt(img.style.top || '50'));
+      });
+    }
+
+    page.appendChild(img);
+    setTimeout(() => img.classList.add('visible'), 1800 + i * 400);
+  });
+}
+
+// ==========================================
+// FLOATING FLOWERS
+// ==========================================
+function createFloatingFlowers() {
+  const flowers = ['🌸', '🌺', '🌷', '💐', '🌻', '🪻', '🌹', '💮'];
+  for (let i = 0; i < 8; i++) {
+    const f = document.createElement('div');
+    f.classList.add('floating-flower');
+    f.textContent = flowers[i % flowers.length];
+    f.style.left = Math.random() * 90 + 5 + '%';
+    f.style.animationDuration = (Math.random() * 12 + 10) + 's';
+    f.style.animationDelay = (Math.random() * 15) + 's';
+    f.style.fontSize = (Math.random() * 0.8 + 1) + 'rem';
+    document.getElementById('marissa-page').appendChild(f);
+    setTimeout(() => f.classList.add('visible'), 3000 + i * 800);
+  }
+}
+
+// ==========================================
+// 19 ENVELOPES
+// ==========================================
+const envelopeContents = [
+  { title: "Year 1", body: "The year you came into this world and changed everything for the better. Your first breath was the start of something truly beautiful. 🌟" },
+  { title: "Year 2", body: "Tiny steps, big personality. You were already making everyone around you smile without even trying. 👣" },
+  { title: "Year 3", body: "The age of wonder — everything was magical, and you reminded everyone around you to see the magic too. ✨" },
+  { title: "Year 4", body: "Growing bolder and braver every single day. Your curiosity about the world was (and still is) infectious. 🦋" },
+  { title: "Year 5", body: "Starting to find your voice and your vibe. Even at 5, you had a spark that couldn't be ignored. 🔥" },
+  { title: "Year 6", body: "Big kid energy! You started showing the world who you really are — kind, funny, and full of life. 💛" },
+  { title: "Year 7", body: "Lucky number 7. The year you probably lost some teeth and gained even more charm. 😁" },
+  { title: "Year 8", body: "Growing into your own. Friendships getting stronger, dreams getting bigger. 🌈" },
+  { title: "Year 9", body: "Almost double digits! You were becoming someone truly special — wise beyond your years. 🌙" },
+  { title: "Year 10", body: "A whole decade of YOU. Ten years of joy, laughter, growth, and love poured into the world. 🎉" },
+  { title: "Year 11", body: "The start of a new chapter. You were figuring out who you wanted to be — and becoming her beautifully. 📖" },
+  { title: "Year 12", body: "Pre-teen magic. More depth, more heart, more of the incredible person you're still becoming. 💫" },
+  { title: "Year 13", body: "Officially a teenager! New adventures, new challenges, and you handled them all with grace. 🌸" },
+  { title: "Year 14", body: "Finding your rhythm. Your passions started to take shape and the world started to notice. 🎵" },
+  { title: "Year 15", body: "Growing through it all. The tough stuff made you stronger and the good stuff made you shine brighter. 💪" },
+  { title: "Year 16", body: "Sweet sixteen. A year of transformation, self-discovery, and becoming even more of a force. 🦋" },
+  { title: "Year 17", body: "Almost an adult but still full of wonder. You balanced both worlds perfectly. 🌟" },
+  { title: "Year 18", body: "Officially grown! You stepped into adulthood with courage, heart, and that signature Marissa energy. 👑" },
+  { title: "Year 19 — NOW ✨", body: "And here you are. 19 years of being extraordinary. This year is YOURS, Marissa. Go out there and make it the best one yet. The world is so lucky to have you. 💜🎂✨" },
+];
+
+let openedEnvelopes = new Set();
+
+function initEnvelopes() {
+  const grid = document.getElementById('envelopes-grid');
+  for (let i = 0; i < 19; i++) {
+    const env = document.createElement('div');
+    env.classList.add('envelope');
+    env.dataset.index = i;
+    env.innerHTML = `<span class="env-num">${i + 1}</span><span class="env-icon">💌</span>`;
+    env.addEventListener('click', () => openEnvelope(i));
+    grid.appendChild(env);
+  }
+}
+
+function openEnvelope(index) {
+  const content = envelopeContents[index];
+  document.getElementById('modal-num').textContent = `#${index + 1}`;
+  document.getElementById('modal-title').textContent = content.title;
+  document.getElementById('modal-body').textContent = content.body;
+  document.getElementById('envelope-modal').classList.add('show');
+  if (!openedEnvelopes.has(index)) {
+    openedEnvelopes.add(index);
+    document.querySelectorAll('.envelope')[index].classList.add('opened');
+    document.getElementById('opened-count').textContent = openedEnvelopes.size;
+    if (openedEnvelopes.size === 19) { setTimeout(launchConfetti, 500); setTimeout(() => showSecret('🎉 All 19 opened!', 'You opened every single envelope! You just unlocked the biggest secret of all: you are deeply, endlessly, completely loved. Happy 19th, Marissa! 💜'), 1200); }
+  }
+}
+
+document.getElementById('modal-close').addEventListener('click', () => { document.getElementById('envelope-modal').classList.remove('show'); });
+document.getElementById('envelope-modal').addEventListener('click', (e) => { if (e.target === document.getElementById('envelope-modal')) document.getElementById('envelope-modal').classList.remove('show'); });
+
+// ==========================================
+// CONFETTI
+// ==========================================
+function launchConfetti() {
+  const colors = ['#9B6FCC', '#D4A843', '#E8A0BF', '#8BC49E', '#C9A6E8', '#F0D68A', '#6B3FA0'];
+  for (let i = 0; i < 100; i++) {
+    const piece = document.createElement('div');
+    piece.classList.add('confetti-piece');
+    piece.style.left = Math.random() * 100 + '%';
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.width = (Math.random() * 8 + 5) + 'px';
+    piece.style.height = (Math.random() * 8 + 5) + 'px';
+    piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    piece.style.animationDuration = (Math.random() * 2 + 2) + 's';
+    piece.style.animationDelay = (Math.random() * 1) + 's';
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 4500);
+  }
+}
+
+// ==========================================
+// SECRET POPUP
+// ==========================================
+function showSecret(title, text) {
+  document.getElementById('secret-title').textContent = title;
+  document.getElementById('secret-text').textContent = text;
+  document.getElementById('secret-overlay').classList.add('show');
+  document.getElementById('secret-popup').classList.add('show');
+}
+function closeSecret() {
+  document.getElementById('secret-overlay').classList.remove('show');
+  document.getElementById('secret-popup').classList.remove('show');
+}
+document.getElementById('secret-overlay').addEventListener('click', closeSecret);
+
+// ==========================================
+// EASTER EGGS
+// ==========================================
+function initEasterEggs() {
+  // EGG 1: Tap "19" 19 times
+  let tapCount = 0;
+  const ageEl = document.getElementById('age-tap');
+  const tapDisplay = document.createElement('div');
+  tapDisplay.classList.add('tap-counter-display');
+  document.getElementById('marissa-page').appendChild(tapDisplay);
+
+  ageEl.addEventListener('click', () => {
+    tapCount++;
+    tapDisplay.textContent = tapCount;
+    tapDisplay.style.opacity = '1';
+    clearTimeout(ageEl._tapTimer);
+    ageEl._tapTimer = setTimeout(() => { tapDisplay.style.opacity = '0'; }, 700);
+
+    if (tapCount === 19) {
+      tapCount = 0;
+      for (let i = 0; i < 40; i++) setTimeout(() => createSparkle(window.innerWidth / 2, window.innerHeight / 3), i * 40);
+      launchConfetti();
+      setTimeout(() => showSecret('🎊 Secret Unlocked!', 'You tapped 19 nineteen times! Marissa, you are literally 1-in-a-million. Here\'s to the most amazing year yet! 💜✨'), 600);
+    }
+  });
+
+  // EGG 2: Triple-tap anywhere on hero (not the age)
+  let heroTaps = 0; let heroTimer;
+  document.getElementById('marissa-hero').addEventListener('click', (e) => {
+    if (e.target === ageEl || e.target.closest('#age-tap')) return;
+    heroTaps++;
+    clearTimeout(heroTimer);
+    heroTimer = setTimeout(() => {
+      if (heroTaps >= 3) {
+        for (let i = 0; i < 5; i++) createSparkle(e.clientX + (Math.random()-0.5)*60, e.clientY + (Math.random()-0.5)*60);
+      }
+      heroTaps = 0;
+    }, 400);
+  });
+
+  // EGG 3: Type "marissa" on keyboard
+  let typed = '';
+  document.addEventListener('keydown', (e) => {
+    typed += e.key.toLowerCase();
+    if (typed.length > 20) typed = typed.slice(-20);
+    if (typed.includes('marissa')) {
+      typed = '';
+      for (let i = 0; i < 60; i++) setTimeout(() => createSparkle(Math.random() * window.innerWidth, Math.random() * window.innerHeight), i * 40);
+      launchConfetti();
+      setTimeout(() => showSecret('⌨️ Keyboard Secret!', 'You spelled out MARISSA! Only someone truly special would think to try that. Happy Birthday! 🎉'), 800);
+    }
+  });
+
+  // EGG 4: Long-press the footer heart for 3 seconds
+  const heart = document.querySelector('.marissa-footer .heart');
+  let heartTimer;
+  heart.style.cursor = 'pointer';
+  heart.style.pointerEvents = 'auto';
+  heart.addEventListener('mousedown', () => { heartTimer = setTimeout(() => { launchConfetti(); showSecret('❤️ Heart Unlocked!', 'This heart has been beating for you all along, Marissa. Every single day, you are so incredibly loved. 💜'); }, 3000); });
+  heart.addEventListener('mouseup', () => clearTimeout(heartTimer));
+  heart.addEventListener('touchstart', () => { heartTimer = setTimeout(() => { launchConfetti(); showSecret('❤️ Heart Unlocked!', 'This heart has been beating for you all along, Marissa. Every single day, you are so incredibly loved. 💜'); }, 3000); });
+  heart.addEventListener('touchend', () => clearTimeout(heartTimer));
+
+  // EGG 5: Click all 7 name letters in order (M-A-R-I-S-S-A)
+  const letterOrder = [];
+  document.querySelectorAll('.name-letter-char').forEach((el, i) => {
+    el.style.cursor = 'pointer';
+    el.style.pointerEvents = 'auto';
+    el.addEventListener('click', () => {
+      letterOrder.push(i);
+      el.style.textShadow = '0 0 20px rgba(212,168,67,0.8)';
+      setTimeout(() => el.style.textShadow = '', 600);
+      if (letterOrder.length === 7 && letterOrder.every((v, idx) => v === idx)) {
+        letterOrder.length = 0;
+        launchConfetti();
+        showSecret('✨ Name Magic!', 'You clicked every letter of MARISSA in order! Your name is magic, just like you. 🌟');
+      } else if (letterOrder.length >= 7) {
+        letterOrder.length = 0;
+      }
+    });
+  });
+
+  // EGG 6: Double-tap a message card
+  document.querySelectorAll('.message-card').forEach((card) => {
+    let lastTap = 0;
+    card.addEventListener('click', () => {
+      const now = Date.now();
+      if (now - lastTap < 400) {
+        launchConfetti();
+        showSecret('💌 Secret Message!', 'The real message behind every message here: You are cherished more than words can say. 💜');
+      }
+      lastTap = now;
+    });
+  });
+}
+
+// ==========================================
+// EGG HINTS ROTATION
+// ==========================================
+const hints = [
+  "psst... try tapping the '19' up top 19 times 👀",
+  "triple-tap the stars for a surprise ✨",
+  "try holding the heart in the footer 💜",
+  "there are smiskis hiding secrets — tap them!",
+  "type 'marissa' on your keyboard for magic ⌨️",
+  "click the letters of your name in order 🌟",
+  "double-tap a birthday message 💌",
+];
+let hintIndex = 0;
+function rotateEggHints() {
+  const hint = document.getElementById('egg-hint');
+  hint.style.opacity = '0';
+  setTimeout(() => {
+    hint.textContent = hints[hintIndex % hints.length];
+    hintIndex++;
+    hint.style.opacity = '1';
+    setTimeout(() => { hint.style.opacity = '0'; }, 6000);
+  }, 500);
+  setTimeout(rotateEggHints, 18000);
+}
+
+// ==========================================
+// SPARKLES
+// ==========================================
+function createSparkle(x, y) {
+  const sparkles = ['✨', '💜', '⭐', '🌟', '💫', '🦋', '🌸', '🎉'];
+  const el = document.createElement('div');
+  el.classList.add('sparkle-explosion');
+  el.style.left = x + 'px'; el.style.top = y + 'px';
+  for (let i = 0; i < 8; i++) {
+    const s = document.createElement('span');
+    s.classList.add('sparkle');
+    s.textContent = sparkles[Math.floor(Math.random() * sparkles.length)];
+    const angle = (Math.PI * 2 * i) / 8 + Math.random() * 0.4;
+    const dist = 60 + Math.random() * 100;
+    s.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+    s.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+    el.appendChild(s);
+  }
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 1300);
+}
+
+// ==========================================
+// SCROLL ANIMATIONS
+// ==========================================
+function initScrollAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delay || 0;
+        setTimeout(() => entry.target.classList.add('visible'), parseInt(delay));
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.name-letter-row, .message-card, .name-section-title').forEach(el => observer.observe(el));
+}
+</script>
+
+</body>
+</html>

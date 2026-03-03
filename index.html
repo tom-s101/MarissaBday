@@ -36,6 +36,13 @@
   --pink: #E8A0BF;
   --green-soft: #8BC49E;
   --white: #FFFFFF;
+  /* Smiski theme colors */
+  --smiski-green: #B8E6C8;
+  --smiski-glow: #7DFFAA;
+  --smiski-dark: #1A3A2A;
+  --smiski-mint: #A8E6CF;
+  --smiski-lime: #C5F0A4;
+  --smiski-shadow: rgba(125, 255, 170, 0.3);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -612,6 +619,439 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(155, 111, 204, 0.3); border-radius: 2px; }
 
+/* ======================== */
+/* SMISKI GLOW-IN-THE-DARK  */
+/* ======================== */
+body.lights-off {
+  transition: background 1.5s ease, color 0.8s ease;
+}
+body.lights-off #marissa-page {
+  background: linear-gradient(170deg, #050a08 0%, #0a1a12 40%, #0d2218 70%, #050a08 100%) !important;
+}
+body.lights-off .smiski-img {
+  filter: drop-shadow(0 0 25px var(--smiski-glow)) drop-shadow(0 0 50px var(--smiski-glow)) brightness(1.3) !important;
+  opacity: 1 !important;
+}
+body.lights-off .smiski-img.clickable:hover {
+  filter: drop-shadow(0 0 40px var(--smiski-glow)) drop-shadow(0 0 80px var(--smiski-glow)) brightness(1.5) !important;
+}
+body.lights-off .particle { background: var(--smiski-glow) !important; }
+body.lights-off .star { background: var(--smiski-glow) !important; }
+body.lights-off .firefly { background: var(--smiski-glow) !important; box-shadow: 0 0 12px var(--smiski-glow), 0 0 30px var(--smiski-glow) !important; }
+body.lights-off .name-letter-char {
+  background: linear-gradient(135deg, var(--smiski-glow), var(--smiski-mint)) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  filter: drop-shadow(0 0 10px var(--smiski-shadow));
+}
+body.lights-off .marissa-hero-age {
+  background: linear-gradient(135deg, var(--smiski-glow), var(--smiski-lime)) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  filter: drop-shadow(0 0 20px var(--smiski-shadow));
+}
+body.lights-off .marissa-hero h1 span {
+  background: linear-gradient(135deg, var(--smiski-mint), #fff, var(--smiski-glow)) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+}
+body.lights-off .envelope {
+  background: rgba(125, 255, 170, 0.05) !important;
+  border-color: rgba(125, 255, 170, 0.2) !important;
+  box-shadow: 0 0 15px rgba(125, 255, 170, 0.1);
+}
+body.lights-off .envelope:hover {
+  box-shadow: 0 0 30px rgba(125, 255, 170, 0.3) !important;
+}
+body.lights-off .message-card {
+  background: rgba(125, 255, 170, 0.03) !important;
+  border-color: rgba(125, 255, 170, 0.1) !important;
+}
+body.lights-off .floating-flower { opacity: 0.15 !important; }
+body.lights-off .peek-smiski { filter: drop-shadow(0 0 20px var(--smiski-glow)) brightness(1.3); }
+body.lights-off .lights-toggle { background: rgba(125, 255, 170, 0.15) !important; border-color: var(--smiski-glow) !important; color: var(--smiski-glow) !important; box-shadow: 0 0 20px rgba(125, 255, 170, 0.3); }
+body.lights-off .smiski-gallery-card { border-color: rgba(125, 255, 170, 0.2) !important; box-shadow: 0 0 20px rgba(125, 255, 170, 0.1); }
+body.lights-off .smiski-gallery-card img { filter: drop-shadow(0 0 15px var(--smiski-glow)) brightness(1.2); }
+body.lights-off .aurora-bg { opacity: 0.4 !important; }
+
+/* Lights toggle button */
+.lights-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 60;
+  background: rgba(26, 14, 48, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(155, 111, 204, 0.25);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.4s;
+  color: var(--purple-soft);
+}
+.lights-toggle:hover { background: rgba(107, 63, 160, 0.2); transform: scale(1.1); }
+.lights-toggle.visible { display: flex; }
+
+/* ======================== */
+/* FIREFLIES                */
+/* ======================== */
+.firefly {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: var(--smiski-mint);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3;
+  box-shadow: 0 0 8px var(--smiski-mint), 0 0 20px rgba(168, 230, 207, 0.4);
+  animation: fireflyDrift linear infinite, fireflyPulse ease-in-out infinite;
+}
+@keyframes fireflyDrift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(var(--fx1), var(--fy1)); }
+  50% { transform: translate(var(--fx2), var(--fy2)); }
+  75% { transform: translate(var(--fx3), var(--fy3)); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes fireflyPulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.9; }
+}
+
+/* ======================== */
+/* AURORA BACKGROUND        */
+/* ======================== */
+.aurora-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.15;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 30%, rgba(125, 255, 170, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 70% 60%, rgba(168, 230, 207, 0.1), transparent),
+    radial-gradient(ellipse 90% 60% at 50% 80%, rgba(155, 111, 204, 0.1), transparent);
+  animation: auroraShift 20s ease-in-out infinite alternate;
+}
+@keyframes auroraShift {
+  0% { filter: hue-rotate(0deg); transform: scale(1); }
+  50% { filter: hue-rotate(15deg); transform: scale(1.05); }
+  100% { filter: hue-rotate(-10deg); transform: scale(1); }
+}
+
+/* ======================== */
+/* CURSOR TRAIL             */
+/* ======================== */
+.cursor-smiski {
+  position: fixed;
+  pointer-events: none;
+  z-index: 500;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  filter: drop-shadow(0 0 6px var(--smiski-shadow));
+  animation: cursorFade 1.2s ease-out forwards;
+}
+@keyframes cursorFade {
+  0% { opacity: 0.8; transform: scale(1) translateY(0); }
+  100% { opacity: 0; transform: scale(0.3) translateY(-30px); }
+}
+
+/* ======================== */
+/* PEEK-A-BOO SMISKIS       */
+/* ======================== */
+.peek-smiski {
+  position: fixed;
+  z-index: 6;
+  width: 50px;
+  height: auto;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s;
+  filter: drop-shadow(0 2px 8px rgba(139, 196, 158, 0.3));
+  cursor: pointer;
+}
+.peek-smiski.peek-left {
+  left: -40px;
+  transform: translateX(0) scaleX(-1);
+}
+.peek-smiski.peek-left.peeking {
+  transform: translateX(30px) scaleX(-1);
+}
+.peek-smiski.peek-right {
+  right: -40px;
+  transform: translateX(0);
+}
+.peek-smiski.peek-right.peeking {
+  transform: translateX(-30px);
+}
+.peek-smiski.peek-bottom {
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+}
+.peek-smiski.peek-bottom.peeking {
+  transform: translateX(-50%) translateY(-30px);
+}
+
+/* ======================== */
+/* SMISKI GALLERY           */
+/* ======================== */
+.smiski-gallery {
+  padding: 60px 20px 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.smiski-gallery h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.smiski-gallery .gallery-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--purple-soft);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.smiski-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  justify-items: center;
+}
+.smiski-gallery-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(155, 111, 204, 0.15);
+  border-radius: 18px;
+  padding: 16px 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+.smiski-gallery-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(125, 255, 170, 0.05), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.smiski-gallery-card:hover::before { opacity: 1; }
+.smiski-gallery-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: var(--smiski-mint);
+  box-shadow: 0 12px 40px rgba(125, 255, 170, 0.15);
+}
+.smiski-gallery-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 12px rgba(139, 196, 158, 0.3));
+  transition: transform 0.4s, filter 0.4s;
+}
+.smiski-gallery-card:hover img {
+  transform: scale(1.1) rotate(3deg);
+  filter: drop-shadow(0 6px 20px rgba(125, 255, 170, 0.4));
+}
+.smiski-gallery-card .smiski-name {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  color: var(--smiski-mint);
+  margin-bottom: 4px;
+}
+.smiski-gallery-card .smiski-fact {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  color: var(--purple-soft);
+  font-style: italic;
+  line-height: 1.4;
+}
+.smiski-gallery-card .found-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--smiski-glow);
+  color: #1a3a2a;
+  font-family: 'Caveat', cursive;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.smiski-gallery-card.found .found-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Smiski collection tracker */
+.smiski-tracker {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 55;
+  background: rgba(26, 14, 48, 0.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(168, 230, 207, 0.2);
+  border-radius: 16px;
+  padding: 8px 14px;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-family: 'Caveat', cursive;
+}
+.smiski-tracker.visible { display: flex; }
+.smiski-tracker:hover {
+  transform: scale(1.05);
+  border-color: var(--smiski-mint);
+  box-shadow: 0 4px 20px rgba(125, 255, 170, 0.2);
+}
+.smiski-tracker .tracker-icon { font-size: 1.3rem; }
+.smiski-tracker .tracker-text {
+  color: var(--smiski-mint);
+  font-size: 0.95rem;
+}
+.smiski-tracker .tracker-count {
+  color: var(--smiski-glow);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+body.lights-off .smiski-tracker {
+  border-color: rgba(125, 255, 170, 0.3) !important;
+  box-shadow: 0 0 15px rgba(125, 255, 170, 0.15);
+}
+
+/* ======================== */
+/* SMISKI DANCE PARTY       */
+/* ======================== */
+@keyframes smiskiDance {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  15% { transform: translateY(-20px) rotate(-15deg) scale(1.1); }
+  30% { transform: translateY(0) rotate(10deg) scale(1); }
+  45% { transform: translateY(-15px) rotate(-10deg) scale(1.15); }
+  60% { transform: translateY(0) rotate(15deg) scale(1); }
+  75% { transform: translateY(-25px) rotate(-5deg) scale(1.2); }
+  90% { transform: translateY(-5px) rotate(5deg) scale(1.05); }
+}
+.smiski-dancing {
+  animation: smiskiDance 0.8s ease-in-out infinite !important;
+}
+.dance-party-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(125, 255, 170, 0.15), rgba(26, 14, 48, 0.95));
+  z-index: 280;
+  pointer-events: none;
+}
+.dance-party-overlay.active { display: block; animation: discoFlash 0.5s ease-in-out infinite alternate; }
+@keyframes discoFlash {
+  0% { background: radial-gradient(ellipse at 30% 40%, rgba(125, 255, 170, 0.12), rgba(26, 14, 48, 0.92)); }
+  33% { background: radial-gradient(ellipse at 70% 30%, rgba(168, 230, 207, 0.12), rgba(26, 14, 48, 0.92)); }
+  66% { background: radial-gradient(ellipse at 50% 70%, rgba(197, 240, 164, 0.12), rgba(26, 14, 48, 0.92)); }
+  100% { background: radial-gradient(ellipse at 40% 50%, rgba(232, 160, 191, 0.12), rgba(26, 14, 48, 0.92)); }
+}
+
+/* ======================== */
+/* HIDDEN SCROLL SECTION    */
+/* ======================== */
+.hidden-scroll-section {
+  padding: 100px 20px 60px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hidden-scroll-section.revealed { opacity: 1; }
+.hidden-scroll-section .secret-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--purple-pale);
+  font-style: italic;
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+.hidden-scroll-section .secret-smiski {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  animation: smiskiFloat3 6s ease-in-out infinite;
+}
+.hidden-scroll-section .secret-sign {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  color: var(--smiski-mint);
+}
+
+/* ======================== */
+/* ENHANCED ENVELOPE GLOW   */
+/* ======================== */
+.envelope .smiski-peek {
+  position: absolute;
+  top: -8px;
+  right: -4px;
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateY(5px);
+}
+.envelope:hover .smiski-peek {
+  opacity: 0.7;
+  transform: translateY(0);
+}
+.envelope.opened .smiski-peek {
+  opacity: 1;
+}
+
+/* Smiski sparkle trail on hover over gallery */
+.smiski-sparkle-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 600;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--smiski-glow);
+  box-shadow: 0 0 6px var(--smiski-glow);
+  animation: trailFade 0.8s ease-out forwards;
+}
+@keyframes trailFade {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0) translateY(-20px); }
+}
+
+/* Enhanced Smiski image glow pulse */
+.smiski-img.visible {
+  animation-name: smiskiFloat1, smiskiGlowPulse;
+}
+@keyframes smiskiGlowPulse {
+  0%, 100% { filter: drop-shadow(0 4px 12px rgba(139, 196, 158, 0.25)); }
+  50% { filter: drop-shadow(0 4px 20px rgba(125, 255, 170, 0.4)); }
+}
+
+/* Responsive additions */
+@media (max-width: 400px) {
+  .smiski-gallery-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+  .smiski-gallery-card img { width: 65px; height: 65px; }
+  .peek-smiski { width: 35px; }
+  .lights-toggle { width: 38px; height: 38px; font-size: 1rem; }
+}
+
 </style>
 <!-- Firebase SDK -->
 <script type="module">
@@ -782,14 +1222,49 @@ body {
     <div class="envelopes-grid" id="envelopes-grid"></div>
   </div>
 
+  <!-- Smiski Gallery Section -->
+  <div class="smiski-gallery" id="smiski-gallery">
+    <h2>Marissa's Smiski Collection</h2>
+    <p class="gallery-sub">Tap each one to discover their secrets... they glow in the dark!</p>
+    <div class="smiski-gallery-grid" id="smiski-gallery-grid"></div>
+  </div>
+
   <!-- Footer -->
   <div class="marissa-footer">
     <p>Made with <span class="heart">♥</span> just for you, Marissa</p>
     <p style="margin-top:8px; font-size:0.9rem; opacity:0.5;">Happy 19th 💜</p>
   </div>
 
+  <!-- Hidden scroll section (past the footer) -->
+  <div class="hidden-scroll-section" id="hidden-scroll">
+    <div class="secret-smiski">🌿</div>
+    <div class="secret-letter">
+      You scrolled all the way down here? That's so you, Marissa — always curious, always looking for more. Well, here's a little secret just between us and the Smiskis:<br><br>
+      Every Smiski hides in a quiet corner of the world, waiting to be found by someone special. Kind of like how the best people in life — people like you — don't need to shout to be noticed. They just... glow.<br><br>
+      You glow, Marissa. In every room, in every photo, in every memory. And this little corner of the internet was made just to remind you of that.<br><br>
+      Happy 19th. May your year be full of surprises, hidden joys, and way too many Smiskis. 💚
+    </div>
+    <div class="secret-sign">— your friends, forever & always</div>
+  </div>
+
   <!-- Easter egg hints (changes over time) -->
   <div class="easter-egg-hint" id="egg-hint"></div>
+
+  <!-- Aurora background effect -->
+  <div class="aurora-bg" id="aurora-bg"></div>
+
+  <!-- Dance party overlay -->
+  <div class="dance-party-overlay" id="dance-party-overlay"></div>
+</div>
+
+<!-- Lights toggle (Smiski glow-in-the-dark mode) -->
+<button class="lights-toggle" id="lights-toggle" title="Toggle Smiski glow mode">🌙</button>
+
+<!-- Smiski collection tracker -->
+<div class="smiski-tracker" id="smiski-tracker">
+  <span class="tracker-icon">🔍</span>
+  <span class="tracker-text">Smiskis found:</span>
+  <span class="tracker-count" id="tracker-count">0 / 7</span>
 </div>
 
 <!-- Envelope Modal -->
@@ -857,13 +1332,13 @@ const db = firebase.firestore();
 // Images from the uploaded photos:
 const GITHUB_RAW = 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/';
 const smiskiImages = [
-  { src: 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/IMG_8646.PNG', alt: 'Party Hat Smiski', clickable: true, secret: '🎊 This smiski has been waiting all year to celebrate YOU, Marissa!' },
-  { src: 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/IMG_8644.PNG', alt: 'Smiski with Birthday Cake', clickable: true, secret: '🎂 The cake smiski has been saving this slice just for you! Make a wish!' },
-  { src: 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/IMG_8649.PNG', alt: 'Smiski Party Horn', clickable: false, secret: null },
-  { src: 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/IMG_8647.PNG', alt: 'Smiski with Gift', clickable: true, secret: '🎁 A gift just for you from the gift smiski: You are endlessly loved.' },
-  { src: 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/IMG_8645.PNG', alt: 'Happy Jumping Smiski', clickable: false, secret: null },
-  { src: 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/IMG_8650.PNG', alt: 'Sleeping Smiski', clickable: true, secret: '😴 Sleeping smiski dreamed about your birthday! It was the best dream ever.' },
-  { src: 'https://raw.githubusercontent.com/tom-s101/MarissaBday/main/IMG_8646.PNG', alt: 'Secret Smiski', clickable: true, secret: '🌟 You found the secret smiski! Happy Birthday Marissa! 🎉' }
+  { src: GITHUB_RAW + 'IMG_8652.PNG', alt: 'Party Hat Smiski', clickable: true, secret: '🎊 Party Hat Smiski has been waiting all year to celebrate YOU, Marissa! Did you know? Smiskis love hiding at parties — behind the cake, under the streamers, everywhere!', name: 'Party Hat', fact: 'Always the life of the party — but only when nobody\'s looking!' },
+  { src: GITHUB_RAW + 'IMG_8651.PNG', alt: 'Smiski with Birthday Cake', clickable: true, secret: '🎂 Cake Smiski baked this just for you! Make a wish, Marissa! Legend says if you close your eyes and make a wish with a Smiski nearby, it always comes true.', name: 'Cake Smiski', fact: 'Secretly taste-tests every cake before the party starts.' },
+  { src: GITHUB_RAW + 'IMG_8650.PNG', alt: 'Smiski Party Horn', clickable: true, secret: '🎺 Party Horn Smiski is TOOTING for your birthday! This one practices all year for this one moment.', name: 'Toot Toot', fact: 'Has been practicing "Happy Birthday" on the horn since January.' },
+  { src: GITHUB_RAW + 'IMG_8649.PNG', alt: 'Smiski with Gift', clickable: true, secret: '🎁 Gift Smiski wrapped this present with love! Inside? The knowledge that you are endlessly, unconditionally adored.', name: 'Gift Giver', fact: 'Wraps gifts with tiny invisible hands. Never uses tape — just magic.' },
+  { src: GITHUB_RAW + 'IMG_8645.PNG', alt: 'Happy Jumping Smiski', clickable: true, secret: '🌟 Jumping Smiski is SO excited it\'s your birthday! This one literally can\'t contain the joy. Neither can we!', name: 'Jumpy', fact: 'Bounces 19 times every time someone says "Happy Birthday."' },
+  { src: GITHUB_RAW + 'IMG_8646.PNG', alt: 'Sleeping Smiski', clickable: true, secret: '😴 Sleeping Smiski dreamed about your birthday! In the dream, you had the most magical day ever. Spoiler: that dream is coming true right now.', name: 'Sleepy', fact: 'Dreams only in pastel colors and birthday wishes.' },
+  { src: GITHUB_RAW + 'IMG_8644.PNG', alt: 'Birthday Smiski', clickable: true, secret: '🌸 The OG Birthday Smiski! This one has your name written on its little heart. Happy Birthday Marissa! 💚', name: 'Birthday BB', fact: 'Was born on YOUR birthday. What a coincidence!' }
 ];
 
 // Smiski positions on screen (top/bottom, left/right)
@@ -918,6 +1393,11 @@ function showPage(page) {
   } else {
     document.getElementById('upload-page').classList.remove('hidden');
     document.getElementById('marissa-page').classList.remove('active');
+    // Hide Marissa-page-only UI
+    const lt = document.getElementById('lights-toggle');
+    const st = document.getElementById('smiski-tracker');
+    if (lt) lt.classList.remove('visible');
+    if (st) st.classList.remove('visible');
   }
 }
 
@@ -1191,46 +1671,49 @@ function initMarissaPage() {
   marissaInitialized = true;
   createParticles('particles2', 25);
   createStars('stars2', 60);
+  createFireflies();
   createSmiskiImages();
   createFloatingFlowers();
+  createSmiskiGallery();
+  createPeekSmiskis();
   initEnvelopes();
   initEasterEggs();
+  initNewEasterEggs();
   initScrollAnimations();
+  initCursorTrail();
+  initHiddenScroll();
+  initSmiskiTracker();
   rotateEggHints();
+  document.getElementById('lights-toggle').classList.add('visible');
+  document.getElementById('smiski-tracker').classList.add('visible');
 }
 
 // ==========================================
 // SMISKI IMAGES (real photos)
 // ==========================================
+let foundSmiskis = new Set();
+
 function createSmiskiImages() {
   const page = document.getElementById('marissa-page');
 
   smiskiImages.forEach((smiski, i) => {
-    if (i === 8) return;
-
     const img = document.createElement('img');
-    img.classList.add('smiski-img');
-    if (smiski.clickable) img.classList.add('clickable');
+    img.classList.add('smiski-img', 'clickable');
     img.alt = smiski.alt;
-
-    // Try GitHub raw first, fall back to a cute placeholder emoji div if it fails
+    img.dataset.smiskiIndex = i;
     img.src = smiski.src;
+
     img.onerror = function() {
-      // Replace broken img with an emoji div so layout still works
       const div = document.createElement('div');
-      div.classList.add('smiski-img');
-      if (smiski.clickable) div.classList.add('clickable');
+      div.classList.add('smiski-img', 'clickable');
       div.style.cssText = `font-size:2.2rem;display:flex;align-items:center;justify-content:center;width:80px;height:80px;`;
-      div.textContent = ['🌟','💜','✨','🎀','⭐','💫','🌸','🎊'][i % 8];
+      div.textContent = ['🌿','💚','✨','🎀','⭐','💫','🌸','🎊'][i % 8];
+      div.dataset.smiskiIndex = i;
       const pos = smiskiPositions[i];
       Object.keys(pos).forEach(k => div.style[k] = pos[k]);
       div.style.position = 'fixed';
       div.style.animationDelay = `${i * 0.6}s`;
-      if (smiski.clickable && smiski.secret) {
-        div.addEventListener('click', () => {
-          showSecret('🌟 Easter Egg!', smiski.secret);
-        });
-      }
+      div.addEventListener('click', () => onSmiskiFound(i, smiski));
       if (img.parentNode) img.parentNode.replaceChild(div, img);
       setTimeout(() => div.classList.add('visible'), 1800 + i * 400);
     };
@@ -1239,24 +1722,52 @@ function createSmiskiImages() {
     Object.keys(pos).forEach(k => img.style[k] = pos[k]);
     img.style.animationDelay = `${i * 0.6}s`;
 
-    if (smiski.clickable && smiski.secret) {
-      img.addEventListener('click', () => {
-        showSecret('🌟 Easter Egg!', smiski.secret);
-        createSparkle(parseInt(img.style.left || '50'), parseInt(img.style.top || '50'));
-      });
-    }
+    img.addEventListener('click', () => {
+      const rect = img.getBoundingClientRect();
+      createSparkle(rect.left + rect.width/2, rect.top + rect.height/2);
+      onSmiskiFound(i, smiski);
+    });
 
     page.appendChild(img);
     setTimeout(() => img.classList.add('visible'), 1800 + i * 400);
   });
 }
 
+function onSmiskiFound(index, smiski) {
+  const wasNew = !foundSmiskis.has(index);
+  foundSmiskis.add(index);
+  updateSmiskiTracker();
+
+  // Mark gallery card as found
+  const card = document.querySelector(`.smiski-gallery-card[data-index="${index}"]`);
+  if (card) card.classList.add('found');
+
+  showSecret('🌿 Smiski Found!', smiski.secret);
+
+  if (wasNew && foundSmiskis.size === smiskiImages.length) {
+    setTimeout(() => {
+      launchConfetti();
+      launchConfetti();
+      setTimeout(() => showSecret('🏆 ALL SMISKIS FOUND!', 'You found every single Smiski! You\'re officially a Smiski whisperer, Marissa. They\'ve been hiding just for you, glowing with love in every little corner. You are their favorite human. 💚✨🌿'), 800);
+    }, 1500);
+  }
+}
+
+function updateSmiskiTracker() {
+  const el = document.getElementById('tracker-count');
+  if (el) el.textContent = `${foundSmiskis.size} / ${smiskiImages.length}`;
+}
+
+function initSmiskiTracker() {
+  updateSmiskiTracker();
+}
+
 // ==========================================
-// FLOATING FLOWERS
+// FLOATING FLOWERS (+ Smiski leaves)
 // ==========================================
 function createFloatingFlowers() {
-  const flowers = ['🌸', '🌺', '🌷', '💐', '🌻', '🪻', '🌹', '💮'];
-  for (let i = 0; i < 8; i++) {
+  const flowers = ['🌸', '🌺', '🌷', '🍀', '🌿', '🪻', '🌱', '💮', '🌸', '🍃'];
+  for (let i = 0; i < 10; i++) {
     const f = document.createElement('div');
     f.classList.add('floating-flower');
     f.textContent = flowers[i % flowers.length];
@@ -1298,11 +1809,12 @@ let openedEnvelopes = new Set();
 
 function initEnvelopes() {
   const grid = document.getElementById('envelopes-grid');
+  const smiskiPeeks = ['🌿','🍀','🌱','💚','✨','🌸','💫','🎀','⭐','🌺','🪴','🍃','🌿','💚','🌱','🍀','✨','🌸','🎉'];
   for (let i = 0; i < 19; i++) {
     const env = document.createElement('div');
     env.classList.add('envelope');
     env.dataset.index = i;
-    env.innerHTML = `<span class="env-num">${i + 1}</span><span class="env-icon">💌</span>`;
+    env.innerHTML = `<span class="env-num">${i + 1}</span><span class="env-icon">💌</span><span class="smiski-peek">${smiskiPeeks[i]}</span>`;
     env.addEventListener('click', () => openEnvelope(i));
     grid.appendChild(env);
   }
@@ -1329,7 +1841,7 @@ document.getElementById('envelope-modal').addEventListener('click', (e) => { if 
 // CONFETTI
 // ==========================================
 function launchConfetti() {
-  const colors = ['#9B6FCC', '#D4A843', '#E8A0BF', '#8BC49E', '#C9A6E8', '#F0D68A', '#6B3FA0'];
+  const colors = ['#9B6FCC', '#D4A843', '#E8A0BF', '#8BC49E', '#C9A6E8', '#F0D68A', '#6B3FA0', '#7DFFAA', '#B8E6C8', '#A8E6CF'];
   for (let i = 0; i < 100; i++) {
     const piece = document.createElement('div');
     piece.classList.add('confetti-piece');
@@ -1463,10 +1975,15 @@ const hints = [
   "psst... try tapping the '19' up top 19 times 👀",
   "triple-tap the stars for a surprise ✨",
   "try holding the heart in the footer 💜",
-  "there are smiskis hiding secrets — tap them!",
+  "there are 7 smiskis hiding — can you find them all? 🌿",
   "type 'marissa' on your keyboard for magic ⌨️",
   "click the letters of your name in order 🌟",
   "double-tap a birthday message 💌",
+  "try the 🌙 button... smiskis glow in the dark! ✨",
+  "keep scrolling past the footer... 👀",
+  "↑↑↓↓←→←→ ... know the code? 🎮",
+  "shake your phone for a surprise! 📱",
+  "type 'smiski' for something special 🌿",
 ];
 let hintIndex = 0;
 function rotateEggHints() {
@@ -1485,7 +2002,7 @@ function rotateEggHints() {
 // SPARKLES
 // ==========================================
 function createSparkle(x, y) {
-  const sparkles = ['✨', '💜', '⭐', '🌟', '💫', '🦋', '🌸', '🎉'];
+  const sparkles = ['✨', '💚', '⭐', '🌟', '💫', '🌿', '🌸', '🍀', '🌱', '💜'];
   const el = document.createElement('div');
   el.classList.add('sparkle-explosion');
   el.style.left = x + 'px'; el.style.top = y + 'px';
@@ -1517,6 +2034,313 @@ function initScrollAnimations() {
   }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.name-letter-row, .message-card, .name-section-title').forEach(el => observer.observe(el));
+}
+
+// ==========================================
+// FIREFLIES (bioluminescent Smiski particles)
+// ==========================================
+function createFireflies() {
+  const page = document.getElementById('marissa-page');
+  for (let i = 0; i < 20; i++) {
+    const ff = document.createElement('div');
+    ff.classList.add('firefly');
+    ff.style.left = Math.random() * 100 + '%';
+    ff.style.top = Math.random() * 100 + '%';
+    const drift = () => (Math.random() - 0.5) * 200 + 'px';
+    ff.style.setProperty('--fx1', drift());
+    ff.style.setProperty('--fy1', drift());
+    ff.style.setProperty('--fx2', drift());
+    ff.style.setProperty('--fy2', drift());
+    ff.style.setProperty('--fx3', drift());
+    ff.style.setProperty('--fy3', drift());
+    ff.style.animationDuration = `${8 + Math.random() * 12}s, ${2 + Math.random() * 4}s`;
+    ff.style.animationDelay = `${Math.random() * 10}s, ${Math.random() * 4}s`;
+    const size = 2 + Math.random() * 4;
+    ff.style.width = size + 'px';
+    ff.style.height = size + 'px';
+    page.appendChild(ff);
+  }
+}
+
+// ==========================================
+// SMISKI GALLERY
+// ==========================================
+function createSmiskiGallery() {
+  const grid = document.getElementById('smiski-gallery-grid');
+  if (!grid) return;
+  smiskiImages.forEach((smiski, i) => {
+    const card = document.createElement('div');
+    card.classList.add('smiski-gallery-card');
+    card.dataset.index = i;
+    card.innerHTML = `
+      <div class="found-badge">Found!</div>
+      <img src="${smiski.src}" alt="${smiski.alt}" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <div style="display:none;font-size:2.5rem;margin-bottom:10px;">${['🌿','💚','✨','🎀','⭐','💫','🌸','🎊'][i % 8]}</div>
+      <div class="smiski-name">${smiski.name}</div>
+      <div class="smiski-fact">${smiski.fact}</div>
+    `;
+    card.addEventListener('click', () => {
+      onSmiskiFound(i, smiski);
+      card.classList.add('found');
+    });
+    // Sparkle trail on mouse move over cards
+    card.addEventListener('mousemove', (e) => {
+      if (Math.random() > 0.7) {
+        const trail = document.createElement('div');
+        trail.classList.add('smiski-sparkle-trail');
+        trail.style.left = e.clientX + 'px';
+        trail.style.top = e.clientY + 'px';
+        document.body.appendChild(trail);
+        setTimeout(() => trail.remove(), 800);
+      }
+    });
+    grid.appendChild(card);
+    if (foundSmiskis.has(i)) card.classList.add('found');
+  });
+}
+
+// ==========================================
+// PEEK-A-BOO SMISKIS
+// ==========================================
+function createPeekSmiskis() {
+  const peekData = [
+    { src: GITHUB_RAW + 'IMG_8647.PNG', pos: 'peek-left', top: '30%' },
+    { src: GITHUB_RAW + 'IMG_8645.PNG', pos: 'peek-right', top: '55%' },
+    { src: GITHUB_RAW + 'IMG_8650.PNG', pos: 'peek-left', top: '75%' },
+  ];
+
+  const page = document.getElementById('marissa-page');
+  peekData.forEach((p, i) => {
+    const img = document.createElement('img');
+    img.classList.add('peek-smiski', p.pos);
+    img.src = p.src;
+    img.style.top = p.top;
+    img.alt = 'Peek-a-boo Smiski';
+    img.onerror = function() { this.style.display = 'none'; };
+
+    // Peek in and out on scroll
+    img.dataset.peekThreshold = 200 + i * 600;
+    img.addEventListener('click', () => {
+      createSparkle(img.getBoundingClientRect().left + 25, img.getBoundingClientRect().top + 25);
+    });
+    page.appendChild(img);
+  });
+
+  // Trigger peeks based on scroll position
+  let lastScroll = 0;
+  const peekEls = document.querySelectorAll('.peek-smiski');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    peekEls.forEach((el) => {
+      const threshold = parseInt(el.dataset.peekThreshold) || 300;
+      const inRange = scrollY > threshold && scrollY < threshold + 800;
+      if (inRange) {
+        el.classList.add('peeking');
+      } else {
+        el.classList.remove('peeking');
+      }
+    });
+    lastScroll = scrollY;
+  }, { passive: true });
+}
+
+// ==========================================
+// CURSOR TRAIL (tiny Smiski emojis)
+// ==========================================
+function initCursorTrail() {
+  const smiskiEmojis = ['🌿', '💚', '✨', '🍀', '🌱', '💫'];
+  let lastTrailTime = 0;
+
+  document.getElementById('marissa-page').addEventListener('mousemove', (e) => {
+    const now = Date.now();
+    if (now - lastTrailTime < 80) return;
+    lastTrailTime = now;
+
+    const trail = document.createElement('div');
+    trail.classList.add('cursor-smiski');
+    trail.textContent = smiskiEmojis[Math.floor(Math.random() * smiskiEmojis.length)];
+    trail.style.left = (e.clientX + (Math.random() - 0.5) * 20) + 'px';
+    trail.style.top = (e.clientY + (Math.random() - 0.5) * 20) + 'px';
+    document.body.appendChild(trail);
+    setTimeout(() => trail.remove(), 1200);
+  });
+}
+
+// ==========================================
+// HIDDEN SCROLL SECTION
+// ==========================================
+function initHiddenScroll() {
+  const section = document.getElementById('hidden-scroll');
+  if (!section) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        section.classList.add('revealed');
+        // Bonus: launch gentle confetti
+        launchConfetti();
+        showSecret('🌿 You Found The Secret!', 'You scrolled all the way down here! The Smiskis are impressed. Only the most curious and wonderful people find this spot. That\'s you, Marissa. 💚');
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+  observer.observe(section);
+}
+
+// ==========================================
+// NEW EASTER EGGS
+// ==========================================
+function initNewEasterEggs() {
+  // LIGHTS TOGGLE (Smiski glow-in-the-dark mode!)
+  const lightsBtn = document.getElementById('lights-toggle');
+  let lightsOff = false;
+  lightsBtn.addEventListener('click', () => {
+    lightsOff = !lightsOff;
+    document.body.classList.toggle('lights-off', lightsOff);
+    lightsBtn.textContent = lightsOff ? '☀️' : '🌙';
+
+    if (lightsOff) {
+      showSecret('🌙 Lights Off!', 'The Smiskis are glowing! Just like real Smiskis, they come alive in the dark. Look around — everything is different now. Marissa, you glow too. Always. 💚✨');
+      // Make fireflies brighter
+      document.querySelectorAll('.firefly').forEach(f => {
+        f.style.width = (3 + Math.random() * 5) + 'px';
+        f.style.height = f.style.width;
+      });
+    } else {
+      document.querySelectorAll('.firefly').forEach(f => {
+        const size = 2 + Math.random() * 4;
+        f.style.width = size + 'px';
+        f.style.height = size + 'px';
+      });
+    }
+  });
+
+  // KONAMI CODE → Smiski dance party!
+  const konamiSequence = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  let konamiIndex = 0;
+  document.addEventListener('keydown', (e) => {
+    const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    if (key === konamiSequence[konamiIndex]) {
+      konamiIndex++;
+      if (konamiIndex === konamiSequence.length) {
+        konamiIndex = 0;
+        triggerSmiskiDanceParty();
+      }
+    } else {
+      konamiIndex = key === konamiSequence[0] ? 1 : 0;
+    }
+  });
+
+  // TYPE "smiski" → secret message
+  let smiskiTyped = '';
+  document.addEventListener('keydown', (e) => {
+    if (e.key.length !== 1) return;
+    smiskiTyped += e.key.toLowerCase();
+    if (smiskiTyped.length > 20) smiskiTyped = smiskiTyped.slice(-20);
+    if (smiskiTyped.includes('smiski')) {
+      smiskiTyped = '';
+      for (let i = 0; i < 40; i++) {
+        setTimeout(() => {
+          createSparkle(Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+        }, i * 50);
+      }
+      launchConfetti();
+      setTimeout(() => showSecret('🌿 Smiski Summoned!', 'You typed the magic word! The Smiskis heard you and they want you to know: you are their absolute favorite person in the whole wide world. They hide, but for you, Marissa, they\'d come out of hiding any day. 💚🌿✨'), 600);
+    }
+  });
+
+  // DEVICE SHAKE (mobile) → Smiskis scatter
+  let lastShakeTime = 0;
+  let shakeCount = 0;
+  let lastAccel = { x: 0, y: 0, z: 0 };
+
+  if (window.DeviceMotionEvent) {
+    window.addEventListener('devicemotion', (e) => {
+      const a = e.accelerationIncludingGravity;
+      if (!a) return;
+      const dx = Math.abs(a.x - lastAccel.x);
+      const dy = Math.abs(a.y - lastAccel.y);
+      const dz = Math.abs(a.z - lastAccel.z);
+      lastAccel = { x: a.x || 0, y: a.y || 0, z: a.z || 0 };
+
+      if (dx + dy + dz > 30) {
+        const now = Date.now();
+        if (now - lastShakeTime > 300) {
+          shakeCount++;
+          lastShakeTime = now;
+
+          if (shakeCount >= 3) {
+            shakeCount = 0;
+            // Scatter all Smiskis temporarily
+            const smiskis = document.querySelectorAll('.smiski-img');
+            smiskis.forEach(s => {
+              const origTransform = s.style.transform;
+              const rx = (Math.random() - 0.5) * 200;
+              const ry = (Math.random() - 0.5) * 200;
+              s.style.transition = 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+              s.style.transform = `translate(${rx}px, ${ry}px) rotate(${Math.random() * 360}deg)`;
+              setTimeout(() => {
+                s.style.transform = origTransform || '';
+                setTimeout(() => { s.style.transition = ''; }, 600);
+              }, 1500);
+            });
+            launchConfetti();
+            showSecret('📱 Shake Shake!', 'You shook the Smiskis! They scattered everywhere but don\'t worry — they always come back. Just like your friends always come back to you, Marissa. 💚');
+          }
+        }
+      }
+    });
+
+    // Reset shake count after inactivity
+    setInterval(() => {
+      if (Date.now() - lastShakeTime > 2000) shakeCount = 0;
+    }, 1000);
+  }
+}
+
+// ==========================================
+// SMISKI DANCE PARTY (Konami Code reward)
+// ==========================================
+function triggerSmiskiDanceParty() {
+  const overlay = document.getElementById('dance-party-overlay');
+  const smiskis = document.querySelectorAll('.smiski-img');
+
+  overlay.classList.add('active');
+
+  // Make all Smiskis dance
+  smiskis.forEach((s, i) => {
+    setTimeout(() => {
+      s.classList.add('smiski-dancing');
+      s.style.zIndex = '290';
+    }, i * 100);
+  });
+
+  // Enhanced confetti burst
+  for (let i = 0; i < 3; i++) {
+    setTimeout(launchConfetti, i * 800);
+  }
+
+  // Dancing Smiski emojis rain from the top
+  const emojis = ['🌿', '💚', '🍀', '🌱', '✨', '💫', '🎉', '🎊'];
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const emoji = document.createElement('div');
+      emoji.style.cssText = `position:fixed;top:-30px;left:${Math.random()*100}%;font-size:${1.5+Math.random()*1.5}rem;z-index:295;pointer-events:none;animation:confettiFall ${2+Math.random()*3}s linear forwards;`;
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      document.body.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 5000);
+    }, i * 150);
+  }
+
+  showSecret('🎉 SMISKI DANCE PARTY!', 'You entered the Konami Code! The Smiskis are LOSING IT! They\'re dancing just for you, birthday girl! ↑↑↓↓←→←→BA = unlimited Smiski energy! 💚🎊✨');
+
+  // End dance party after 6 seconds
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    smiskis.forEach(s => {
+      s.classList.remove('smiski-dancing');
+      s.style.zIndex = '';
+    });
+  }, 6000);
 }
 </script>
 
